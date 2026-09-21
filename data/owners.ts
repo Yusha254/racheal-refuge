@@ -23,7 +23,7 @@ export const owners: OwnerProfile[] = [
     initial: "K",
     name: "Rev. Ken Aringo",
     role: "Director & Founder of PHD Ministries",
-    image: "/images/WhatsApp-Image-2025-06-27-at-12.58.00_796da392-e1751036469417.jpg",
+    image: "/images/pastor-image.png",
     paragraphs: [
       "Driving community development and cultivating strategic partnerships to expand the vision and impact of Rachel's Refuge.",
       "Rev. Ken Aringo brings deep expertise in community building and collaborative outreach, strengthening our mission to empower girls by bridging the gap between our basketball programs and broader local initiatives.",
