@@ -1,0 +1,70 @@
+import type { GalleryItem } from "@/types";
+
+export const galleryItems: GalleryItem[] = [
+  {
+    id: "gallery-promo-video",
+    src: "/images/thumbnail.jpeg",
+    title: "Rachel's Refuge Promo Video",
+    subtitle: "Watch our mission, athletes, and story in action.",
+    alt: "Rachel's Refuge promotional video",
+    isVideo: true,
+    videoUrl: "/images/promo-video.mp4",
+    poster: "/images/thumbnail.jpeg",
+  },
+  {
+    id: "gallery-1",
+    src: "https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0044-scaled.jpg",
+    title: "Basketball & Community",
+    subtitle: "Rachel's Refuge in action.",
+    alt: "Rachel's Refuge basketball and community gathering",
+  },
+  {
+    id: "gallery-2",
+    src: "https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0044-scaled.jpg",
+    title: "Making Memories",
+    subtitle: "Celebrating our community.",
+    alt: "Rachel's Refuge event celebrating community",
+  },
+  {
+    id: "gallery-3",
+    src: "https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0039.jpg",
+    title: "Our Programs",
+    subtitle: "Growing together through sport.",
+    alt: "Rachel's Refuge program session",
+  },
+  {
+    id: "gallery-4",
+    src: "https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0053-scaled.jpg",
+    title: "Teamwork",
+    subtitle: "Building confidence through basketball.",
+    alt: "Rachel's Refuge basketball teamwork and training",
+  },
+  {
+    id: "gallery-5",
+    src: "https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0056-scaled.jpg",
+    title: "Mentorship",
+    subtitle: "Supporting young girls.",
+    alt: "Rachel's Refuge mentoring session",
+  },
+  {
+    id: "gallery-6",
+    src: "https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0062-scaled.jpg",
+    title: "Community",
+    subtitle: "Together we grow stronger.",
+    alt: "Rachel's Refuge community unity",
+  },
+  {
+    id: "gallery-7",
+    src: "https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0051-scaled.jpg",
+    title: "Celebrating Success",
+    subtitle: "Creating unforgettable moments.",
+    alt: "Rachel's Refuge celebrating accomplishments",
+  },
+  {
+    id: "gallery-8",
+    src: "https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0055-scaled.jpg",
+    title: "Girls in Action",
+    subtitle: "Empowering the next generation.",
+    alt: "Rachel's Refuge girls playing basketball",
+  },
+];

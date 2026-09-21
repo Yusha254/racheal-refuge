@@ -1,0 +1,343 @@
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 5%;
+}
+
+.intro {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.yellowLine {
+  width: 80px;
+  height: 5px;
+  background: var(--gold, #f4c430);
+  margin: 18px auto;
+  border-radius: 999px;
+}
+
+/* Featured Video Section */
+.featuredVideoSection {
+  margin: 0 auto 60px;
+  max-width: 960px;
+}
+
+.videoCard {
+  background: var(--white, #ffffff);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(61, 18, 111, 0.15);
+  border: 1px solid rgba(123, 63, 181, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(61, 18, 111, 0.22);
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0f051d;
+  overflow: hidden;
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: none;
+}
+
+.videoInfo {
+  padding: 24px 30px;
+  background: linear-gradient(135deg, #ffffff 0%, #faf6ff 100%);
+}
+
+.videoBadge {
+  display: inline-block;
+  background: var(--purple-700, #5b2d91);
+  color: var(--gold, #f4c430);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.videoTitle {
+  color: var(--purple-800, #3d126f);
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.videoDescription {
+  color: #554466;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.playBadge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  background: rgba(61, 18, 111, 0.85);
+  border: 2px solid var(--gold, #f4c430);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold, #f4c430);
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.card:hover .playBadge {
+  transform: scale(1.15);
+  background: var(--purple-700, #5b2d91);
+}
+
+.playIcon {
+  margin-left: 2px;
+}
+
+.lightboxVideoWrapper {
+  position: relative;
+  width: min(85vw, 1000px);
+  aspect-ratio: 16 / 9;
+  max-height: 70vh;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+  background: #000000;
+}
+
+.lightboxVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.card {
+  position: relative;
+  height: 290px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--purple-100, #f3eaff);
+  box-shadow: 0 8px 24px rgba(91, 45, 145, 0.12);
+  cursor: pointer;
+  border: 1px solid rgba(123, 63, 181, 0.15);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(91, 45, 145, 0.25);
+  border-color: rgba(244, 196, 48, 0.6);
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.cardImage {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.card:hover .cardImage {
+  transform: scale(1.08);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px 20px;
+  background: linear-gradient(
+    to top,
+    rgba(45, 15, 75, 0.95) 0%,
+    rgba(61, 18, 111, 0.6) 45%,
+    transparent 80%
+  );
+  color: var(--white, #ffffff);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlayTitle {
+  color: var(--gold, #f4c430);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.overlaySubtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+}
+
+.messageBox {
+  text-align: center;
+  background: linear-gradient(135deg, #f8f4ff 0%, #ede3ff 100%);
+  border-radius: 24px;
+  padding: 48px 32px;
+  margin-top: 60px;
+  border: 1px solid rgba(123, 63, 181, 0.15);
+  box-shadow: 0 8px 25px rgba(91, 45, 145, 0.08);
+}
+
+.messageTitle {
+  color: var(--purple-700, #5b2d91);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.messageText {
+  color: #4a3e56;
+  font-size: 1.1rem;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Lightbox Modal */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(20, 8, 35, 0.95);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.lightboxContent {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightboxImageWrapper {
+  position: relative;
+  width: min(85vw, 1000px);
+  height: min(70vh, 700px);
+}
+
+.lightboxImage {
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+.lightboxCaption {
+  margin-top: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.lightboxCaption h3 {
+  color: var(--gold, #f4c430);
+  font-size: 1.35rem;
+  margin-bottom: 4px;
+}
+
+.lightboxCaption p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+}
+
+.closeButton {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 12px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.closeButton:hover {
+  color: var(--gold, #f4c430);
+  transform: scale(1.15);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    height: 320px;
+  }
+
+  .section {
+    padding: 50px 5%;
+  }
+
+  .messageBox {
+    padding: 32px 20px;
+  }
+
+  .messageTitle {
+    font-size: 1.6rem;
+  }
+}

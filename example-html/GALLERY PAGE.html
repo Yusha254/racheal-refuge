@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rachel's Refuge | Gallery</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #faf7ff;
+      color: #3b2419;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    header {
+      width: 100%;
+      min-height: 100px;
+      background: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 5px 40px;
+
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #3b2419;
+      font-weight: bold;
+
+      padding: 10px 16px;
+
+      border-radius: 25px;
+
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #f4c430;
+      color: #3b2419;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          #5b2d91,
+          #7b3fb5
+        );
+
+      color: white;
+
+      text-align: center;
+
+      padding: 85px 20px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      color: #f4c430;
+
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+
+    /* ================= GALLERY SECTION ================= */
+
+    .gallery-section {
+      max-width: 1200px;
+      margin: auto;
+
+      padding: 70px 25px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      color: #5b2d91;
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      max-width: 750px;
+      margin: auto;
+
+      color: #666;
+
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .yellow-line {
+      width: 80px;
+      height: 5px;
+
+      background: #f4c430;
+
+      margin: 15px auto;
+
+      border-radius: 10px;
+    }
+
+
+    /* ================= PHOTO GRID ================= */
+
+    .gallery {
+      display: grid;
+
+      grid-template-columns:
+                repeat(4, 1fr);
+
+      gap: 20px;
+    }
+
+
+    /* ================= PHOTO CARD ================= */
+
+    .gallery-item {
+      position: relative;
+
+      height: 280px;
+
+      overflow: hidden;
+
+      border-radius: 20px;
+
+      background: #f3eaff;
+
+      box-shadow:
+        0 7px 20px
+        rgba(91,45,145,0.15);
+
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-8px);
+
+      box-shadow:
+        0 15px 30px
+        rgba(91,45,145,0.25);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+      transition: 0.5s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+
+    /* ================= IMAGE OVERLAY ================= */
+
+    .overlay {
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      padding: 20px;
+
+      background:
+        linear-gradient(
+          transparent,
+          rgba(91,45,145,0.95)
+        );
+
+      color: white;
+
+      opacity: 0;
+
+      transition: 0.3s;
+    }
+
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay h3 {
+      color: #f4c430;
+      font-size: 20px;
+    }
+
+    .overlay p {
+      font-size: 14px;
+    }
+
+
+    /* ================= LIGHTBOX ================= */
+
+    .lightbox {
+      display: none;
+
+      position: fixed;
+
+      z-index: 5000;
+
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background:
+        rgba(25,10,40,0.95);
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 30px;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85%;
+
+      object-fit: contain;
+
+      border-radius: 15px;
+
+      box-shadow:
+        0 10px 50px
+        rgba(0,0,0,0.5);
+    }
+
+    .close {
+      position: absolute;
+
+      top: 25px;
+      right: 40px;
+
+      color: white;
+
+      font-size: 45px;
+
+      cursor: pointer;
+
+      font-weight: bold;
+    }
+
+    .close:hover {
+      color: #f4c430;
+    }
+
+
+    /* ================= GALLERY MESSAGE ================= */
+
+    .gallery-message {
+      text-align: center;
+
+      background: #f3eaff;
+
+      border-radius: 20px;
+
+      padding: 30px;
+
+      margin-top: 50px;
+    }
+
+    .gallery-message h2 {
+      color: #5b2d91;
+
+      margin-bottom: 10px;
+    }
+
+    .gallery-message p {
+      color: #555;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #2d1a3d;
+
+      color: white;
+
+      text-align: center;
+
+      padding: 30px 20px;
+
+      margin-top: 30px;
+    }
+
+    footer span {
+      color: #f4c430;
+      font-weight: bold;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 900px) {
+
+      .gallery {
+        grid-template-columns:
+                    repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      header {
+        flex-direction: column;
+
+        padding: 10px;
+
+        gap: 10px;
+      }
+
+      .logo {
+        width: 75px;
+        height: 75px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 14px;
+
+        padding: 8px 10px;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero h2 {
+        font-size: 23px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item {
+        height: 330px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
+      .close {
+        top: 10px;
+        right: 20px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+  <!-- LOGO -->
+
+  <a href="index.html">
+
+    <img
+       <img src="C:\Users\kenne\OneDrive\Desktop\PROJECT 2062027\PIC\fig_image_1_9.jpg"
+      alt="Rachel's Refuge Logo"
+      class="logo"
+    >
+
+  </a>
+
+
+  <!-- NAVIGATION -->
+<nav>
+    <a href="FRONT%20PAGE.html">Home</a>
+    <a href="OUR%20STORY.html">About Us</a>
+    <a href="GALLERY%20PAGE.html">Gallery page</a>
+    <a href="BOARD%20MEMBERS.html">Board Members</a>
+    <a href="CONTACT%20US.html">Contact us</a>
+     <a href="PROGRAMS">PROGRAMS</a>
+  </nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+  <h1>OUR GALLERY</h1>
+
+  <h2>Moments That Inspire</h2>
+
+  <p>
+    Explore moments from Rachel's Refuge and celebrate
+    the girls, basketball, mentorship, teamwork and
+    community that make our mission possible.
+  </p>
+
+</section>
+
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery-section">
+
+
+  <div class="section-title">
+
+    <h2>Rachel's Refuge Gallery</h2>
+
+    <div class="yellow-line"></div>
+
+    <p>
+      Every picture tells a story. Browse our collection
+      of memorable moments and click any picture to
+      view it in full size.
+    </p>
+
+  </div>
+
+
+
+  <div class="gallery">
+
+
+    <!-- PHOTO 1 -->
+
+    <div
+      class="gallery-item"
+      onclick="openLightbox(this)"
+    >
+
+      <div class="gallery-item">
+        <video controls>
+          <source src="rachels-refuge-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>https://youtu.be/FZCa-cXSsf8
+
+      <div class="overlay">
+
+        <h3>Basketball & Community</h3>
+
+        <p>
+          Rachel's Refuge in action.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PHOTO 2 -->
+
+    <div
+      class="gallery-item"
+      onclick="openLightbox(this)"
+    >
+
+      <img
+        src="https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0044-scaled.jpg"
+        alt="Rachel's Refuge event"
+      >
+
+      <div class="overlay">
+
+        <h3>Making Memories</h3>
+
+        <p>
+          Celebrating our community.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PHOTO 3 -->
+
+    <div
+      class="gallery-item"
+      onclick="openLightbox(this)"
+    >
+
+      <img
+        src="https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0039.jpg"
+        alt="Rachel's Refuge program"
+      >
+
+      <div class="overlay">
+
+        <h3>Our Programs</h3>
+
+        <p>
+          Growing together through sport.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PHOTO 4 -->
+
+    <div
+      class="gallery-item"
+      onclick="openLightbox(this)"
+    >
+
+      <img
+        src="https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0053-scaled.jpg"
+        alt="Rachel's Refuge basketball program"
+      >
+
+      <div class="overlay">
+
+        <h3>Teamwork</h3>
+
+        <p>
+          Building confidence through basketball.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PHOTO 5 -->
+
+    <div
+      class="gallery-item"
+      onclick="openLightbox(this)"
+    >
+
+      <img
+        src="https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0056-scaled.jpg"
+        alt="Rachel's Refuge mentoring"
+      >
+
+      <div class="overlay">
+
+        <h3>Mentorship</h3>
+
+        <p>
+          Supporting young girls.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PHOTO 6 -->
+
+    <div
+      class="gallery-item"
+      onclick="openLightbox(this)"
+    >
+
+      <img
+        src="https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0062-scaled.jpg"
+        alt="Rachel's Refuge community"
+      >
+
+      <div class="overlay">
+
+        <h3>Community</h3>
+
+        <p>
+          Together we grow stronger.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PHOTO 7 -->
+
+    <div
+      class="gallery-item"
+      onclick="openLightbox(this)"
+    >
+
+      <img
+        src="https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0051-scaled.jpg"
+        alt="Rachel's Refuge event"
+      >
+
+      <div class="overlay">
+
+        <h3>Celebrating Success</h3>
+
+        <p>
+          Creating unforgettable moments.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PHOTO 8 -->
+
+    <div
+      class="gallery-item"
+      onclick="openLightbox(this)"
+    >
+
+      <img
+        src="https://phdmini.org/wp-content/uploads/2025/06/IMG-20250419-WA0055-scaled.jpg"
+        alt="Rachel's Refuge girls"
+      >
+
+      <div class="overlay">
+
+        <h3>Girls in Action</h3>
+
+        <p>
+          Empowering the next generation.
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- ================= MESSAGE ================= -->
+
+  <div class="gallery-message">
+
+    <h2>More Than Basketball</h2>
+
+    <p>
+      At Rachel's Refuge, every game, training session
+      and gathering is an opportunity to build confidence,
+      friendships, leadership and hope.
+    </p>
+
+  </div>
+
+
+</section>
+
+
+
+<!-- ================= LIGHTBOX ================= -->
+
+<div
+  class="lightbox"
+  id="lightbox"
+  onclick="closeLightbox()"
+>
+
+        <span class="close">
+            &times;
+        </span>
+
+  <img
+    id="lightbox-image"
+    src=""
+    alt="Gallery image"
+  >
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <p>
+    © 2026
+    <span>Rachel's Refuge</span>.
+    All Rights Reserved.
+  </p>
+
+  <p>
+    Empowering Girls • Building Champions • Changing Lives
+  </p>
+
+</footer>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+  function openLightbox(element) {
+
+    const image =
+      element.querySelector("img");
+
+    const lightbox =
+      document.getElementById("lightbox");
+
+    const lightboxImage =
+      document.getElementById("lightbox-image");
+
+    lightboxImage.src =
+      image.src;
+
+    lightbox.style.display =
+      "flex";
+  }
+
+
+  function closeLightbox() {
+
+    document.getElementById("lightbox")
+      .style.display = "none";
+
+  }
+
+
+  /* Prevent image click from
+     immediately closing lightbox */
+
+  document.getElementById("lightbox-image")
+    .addEventListener(
+      "click",
+      function(event) {
+
+        event.stopPropagation();
+
+      }
+    );
+
+
+  /* ESC key closes image */
+
+  document.addEventListener(
+    "keydown",
+    function(event) {
+
+      if (event.key === "Escape") {
+
+        closeLightbox();
+
+      }
+
+    }
+  );
+
+</script>
+<footer>
+  <a href="#home">
+    <img src="C:\Users\kenne\OneDrive\Desktop\PROJECT 2062027\PIC\PHD-Logo.png"
+         alt="Rachel's Refuge Logo"
+         class="logo">
+  </a>
+
+
+</body>
+</html>

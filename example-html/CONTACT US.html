@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | Rachel's Refugee Basketball</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ffffff, #8e44ad);
+      min-height: 100vh;
+      color: white;
+    }
+
+    header {
+      background: #3b0b5c;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: #ffd700;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .contact-section {
+      width: 90%;
+      max-width: 850px;
+      margin: 50px auto;
+    }
+
+    .contact-box {
+      background: white;
+      color: #333;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .contact-box h1 {
+      text-align: center;
+      color: #5b1a8e;
+      margin-bottom: 10px;
+    }
+
+    .contact-box p {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #666;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #5b1a8e;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #8e44ad;
+    }
+
+    textarea {
+      height: 150px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: #5b1a8e;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ffd700;
+      color: #3b0b5c;
+    }
+
+    footer {
+      text-align: center;
+      background: #3b0b5c;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .heart {
+      color: #ffd700;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        text-align: center;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 5px;
+        display: inline-block;
+      }
+
+      .contact-box {
+        padding: 25px;
+      }
+    }
+  </style>
+  <!-- LOGO TOP LEFT -->
+
+  <a href="index.html">
+    <img
+     <img src="C:\Users\kenne\OneDrive\Desktop\PROJECT 2062027\PIC\fig_image_1_9.jpg"
+      alt="Rachel's Refuge Logo"
+      class="logo"
+    >
+  </a>
+
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🏀 RACHEL's REFUGEE</div>
+
+ 
+</header>
+
+
+<section class="contact-section">
+
+  <div class="contact-box">
+
+    <h1>Get In Touch</h1>
+
+    <p>
+      Have a question, want to support our basketball programs,
+      or want to join us? Send us a message!
+    </p>
+
+
+    <!-- CONTACT FORM -->
+
+    <form action="https://formsubmit.co/iany...@gmail.com" method="POST">
+
+      <!-- Email subject -->
+      <input type="hidden"
+             name="_subject"
+             value="New Message from Rachel Refugee Website">
+
+      <!-- Prevent spam -->
+      <input type="hidden"
+             name="_captcha"
+             value="true">
+
+      <!-- Redirect after submission -->
+      <input type="hidden"
+             name="_next"
+             value="https://yourwebsite.com/thank-you.html">
+
+
+      <label for="name">Your Name</label>
+
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your full name"
+        required
+      >
+
+
+      <label for="email">Your Email</label>
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email address"
+        required
+      >
+
+
+      <label for="phone">Phone Number</label>
+
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Enter your phone number"
+      >
+
+
+      <label for="reason">Reason for Contact</label>
+
+      <select id="reason" name="reason" required>
+
+        <option value="">-- Select an option --</option>
+
+        <option value="Join Basketball Program">
+          Join Basketball Program
+        </option>
+
+        <option value="Support the Organization">
+          Support the Organization
+        </option>
+
+        <option value="Volunteer">
+          Volunteer
+        </option>
+
+        <option value="Partnership">
+          Partnership
+        </option>
+
+        <option value="General Question">
+          General Question
+        </option>
+
+      </select>
+
+
+      <label for="message">Your Message</label>
+
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Write your message here..."
+        required
+      ></textarea>
+
+
+      <button type="submit">
+        🏀 SEND MESSAGE
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<footer>
+  <p>
+    © 2026 Rachel's Refugee Basketball.
+    Made with <span class="heart">💛</span> and
+    <span class="heart">💜</span>
+  </p>
+</footer>
+
+</body>
+</html>

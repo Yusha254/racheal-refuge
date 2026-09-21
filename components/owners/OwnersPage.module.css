@@ -1,0 +1,167 @@
+.ownersSection {
+  background: var(--light-purple);
+}
+
+.statsSection {
+  background: var(--white);
+}
+
+.progressSection {
+  background: linear-gradient(135deg, #f8effb, #ead8f2);
+}
+
+.goalsSection {
+  background: var(--white);
+}
+
+/* Story Card */
+.storyCard {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 44px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(91, 45, 145, 0.08);
+  border: 1px solid rgba(123, 63, 181, 0.12);
+  border-left: 6px solid var(--gold, #f4c430);
+}
+
+.storyHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.storyIcon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.storyHeader h3 {
+  font-size: 1.8rem;
+  color: var(--purple-700, #5b2d91);
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.storySubtitle {
+  color: var(--purple-500, #7b3fb5);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.storyImageWrap {
+  margin: 20px 0 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.storyPara {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #3b2419;
+  margin-bottom: 18px;
+}
+
+.highlight {
+  background: rgba(134, 41, 208, 0.08);
+  border-left: 4px solid var(--gold, #f4c430);
+  padding: 20px 24px;
+  border-radius: 0 16px 16px 0;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--purple-800, #3d126f);
+  margin: 28px 0 0;
+  font-weight: 600;
+}
+
+/* Legacy Box */
+.legacyBox {
+  background: linear-gradient(135deg, #3d126f 0%, #5b2d91 100%);
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 44px;
+  box-shadow: 0 12px 36px rgba(61, 18, 111, 0.2);
+}
+
+.legacyBox h2 {
+  color: var(--gold, #f4c430);
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.legacyBox p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 16px;
+}
+
+.legacyBox p:last-child {
+  margin-bottom: 0;
+}
+
+/* Values Section */
+.valuesSection {
+  background: #ffffff;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.valueCard {
+  background: rgba(134, 41, 208, 0.06);
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid rgba(123, 63, 181, 0.15);
+  box-shadow: 0 6px 20px rgba(91, 45, 145, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(91, 45, 145, 0.15);
+}
+
+.valueIcon {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+}
+
+.valueCard h3 {
+  color: var(--purple-700, #5b2d91);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.valueCard p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .storyCard {
+    padding: 26px 20px;
+  }
+
+  .legacyBox {
+    padding: 28px 20px;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+}

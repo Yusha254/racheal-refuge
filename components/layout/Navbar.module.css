@@ -1,0 +1,96 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(61, 18, 111, 0.98);
+  border-bottom: 2px solid var(--gold);
+  padding: 12px 5%;
+}
+
+.navInner {
+  max-width: 1400px;
+  min-height: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  min-width: 225px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+}
+
+.brandLogoWrapper {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.brandLogo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brandName {
+  font-family: "Playfair Display", serif;
+  font-size: 27px;
+  font-style: italic;
+  line-height: 1;
+}
+
+.brandSub {
+  margin-top: 5px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  line-height: 1;
+}
+
+.navLinks {
+  display: flex;
+  gap: 24px;
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.navLinks a {
+  transition: 0.25s ease;
+}
+
+.navLinks a:hover,
+.navLinks a[aria-current="page"] {
+  color: var(--gold);
+}
+
+@media (max-width: 1000px) {
+  .navLinks {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .brand {
+    min-width: auto;
+  }
+
+  .brandName {
+    font-size: 22px;
+  }
+
+  .brandMark {
+    width: 44px;
+    height: 44px;
+  }
+}

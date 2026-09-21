@@ -1,0 +1,95 @@
+/* Shared grid */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.columns4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.columns3 {
+  gap: 22px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Badge variant: white card, circular number badge above the title
+   (used for "Who Can Join?") */
+.badgeCard {
+  text-align: center;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px 18px;
+}
+
+.badgeNumber {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: var(--gold);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.badgeCard h3 {
+  color: var(--purple);
+  font-family: "Playfair Display", serif;
+  font-size: 1.35rem;
+  margin-bottom: 6px;
+}
+
+.badgeCard p {
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+/* Large variant: tinted card, oversized number above the title
+   (used for "Why Our Programs Matter" impact facts) */
+.largeCard {
+  background: var(--light-purple);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 30px;
+  text-align: center;
+}
+
+.largeNumber {
+  color: var(--purple);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.largeCard h3 {
+  color: var(--purple);
+  margin: 10px 0 5px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+}
+
+.largeCard p {
+  color: var(--gray);
+}
+
+@media (max-width: 1000px) {
+  .columns4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .columns4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  .columns3 {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,65 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 5%;
+  color: var(--white);
+  background:
+    linear-gradient(
+      160deg,
+      rgba(91, 36, 145, 0.90) 0%,
+      rgba(123, 63, 181, 0.80) 55%,
+      rgba(61, 18, 111, 0.92) 100%
+    ),
+    url("/images/hero-bg.jpg") center / cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: -5%;
+  bottom: -70px;
+  width: 110%;
+  height: 120px;
+  background: var(--light-purple);
+  border-radius: 50% 50% 0 0;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.heading {
+  max-width: 850px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.98;
+  margin-bottom: 20px;
+}
+
+.heading :global(em) {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.paragraph {
+  max-width: 700px;
+  font-size: 1.15rem;
+  color: #f7effb;
+}
+
+@media (max-width: 550px) {
+  .hero {
+    padding: 85px 5%;
+  }
+}

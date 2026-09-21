@@ -1,0 +1,10 @@
+.footer {
+  text-align: center;
+  background: #3b0b5c;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.heart {
+  color: var(--gold);
+}

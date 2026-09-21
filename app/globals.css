@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap");
+
+:root {
+  --purple: #3d126f;
+  --deep-purple: #210538;
+  --light-purple: #f8effb;
+  --lavender: #ead8f2;
+  --gold: #f6c928;
+  --pink: #22053a;
+  --pink-accent: #d3ac12;
+  --white: #ffffff;
+  --text: #321842;
+  --gray: #6d5977;
+  --border: #ead5f1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: var(--text);
+  background: var(--light-purple);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Shared section rhythm, reused by every page's <section class="section"> */
+.section {
+  padding: 90px 5%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 550px) {
+  .section {
+    padding: 70px 5%;
+  }
+}

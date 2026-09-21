@@ -1,0 +1,15 @@
+.programsSection {
+  background: var(--light-purple);
+}
+
+.featuredSection {
+  background: var(--white);
+}
+
+.joinSection {
+  background: linear-gradient(135deg, #ead8f2, #f8effb);
+}
+
+.impactSection {
+  background: var(--white);
+}

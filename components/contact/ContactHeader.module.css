@@ -1,0 +1,38 @@
+.header {
+  background: #3b0b5c;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--gold);
+}
+
+.nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 600px) {
+  .header {
+    text-align: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav a {
+    margin: 5px;
+    display: inline-block;
+  }
+}

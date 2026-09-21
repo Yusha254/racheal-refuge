@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rachel's Refuge | Board Members</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #faf7ff;
+      color: #3b2419;
+      line-height: 1.7;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      width: 100%;
+      min-height: 100px;
+      background: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 5px 40px;
+
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+    }
+
+       }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color:BROWN;
+      font-weight: bold;
+      padding: 10px 16px;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: PURPLE;
+      color: #3b2419;
+    }
+
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #f4c430;
+      color: #3b2419;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+      background: linear-gradient(
+        135deg,
+        #5b2d91,
+        #7b3fb5
+      );
+
+      color: white;
+      text-align: center;
+      padding: 85px 20px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      color: #f4c430;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+
+    /* ================= BOARD SECTION ================= */
+
+    .board-section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      color: #5b2d91;
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      max-width: 700px;
+      margin: auto;
+      color: #555;
+    }
+
+    .yellow-line {
+      width: 80px;
+      height: 5px;
+      background: #f4c430;
+      margin: 15px auto;
+      border-radius: 10px;
+    }
+
+
+    /* ================= BOARD CARDS ================= */
+
+    .board-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 35px;
+    }
+
+    .board-card {
+      background: rgb(134 41 208 / 0.31);
+      border-radius: 25px;
+      overflow: hidden;
+
+      box-shadow: 0 8px 30px rgba(91,45,145,0.13);
+
+      transition: 0.3s;
+      border-bottom: 6px solid #f4c430;
+    }
+
+    .board-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(91,45,145,0.22);
+    }
+
+
+    /* ================= PICTURE BOX ================= */
+
+    .photo-box {
+      width: 100%;
+      height: 360px;
+      overflow: hidden;
+      background: #f3eaff;
+    }
+
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+
+      transition: 0.5s;
+    }
+
+    .board-card:hover .photo-box img {
+      transform: scale(1.05);
+    }
+
+
+    /* ================= CARD INFORMATION ================= */
+
+    .card-content {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      color: #5b2d91;
+      font-size: 27px;
+      margin-bottom: 5px;
+    }
+
+    .position {
+      color: #a06ac5;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .card-content p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+
+    /* ================= PROFILE BUTTON ================= */
+
+    .profile-button {
+      display: inline-block;
+
+      background: rgb(134 41 208 / 0.31);
+      color: #3b2419;
+
+      text-decoration: none;
+
+      padding: 13px 28px;
+
+      border-radius: 30px;
+
+      font-weight: bold;
+
+      transition: 0.3s;
+    }
+
+    .profile-button:hover {
+      background: #5b2d91;
+      color: white;
+      transform: scale(1.05);
+    }
+
+
+    /* ================= PROFILE SECTIONS ================= */
+
+    .profile {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 45px;
+
+      background: rgb(134 41 208 / 0.31);
+
+      border-radius: 25px;
+
+      box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+
+      border-left: 7px solid #f4c430;
+    }
+
+    .profile h2 {
+      color: #5b2d91;
+      font-size: 34px;
+      margin-bottom: 5px;
+    }
+
+    .profile .role {
+      color: #a06ac5;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .profile p {
+      margin-bottom: 18px;
+      font-size: 17px;
+    }
+
+    .profile ul {
+      margin: 15px 0 20px 25px;
+    }
+
+    .profile li {
+      margin-bottom: 8px;
+    }
+
+    .back-button {
+      display: inline-block;
+
+      background: #5b2d91;
+      color: white;
+
+      padding: 12px 25px;
+
+      border-radius: 25px;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      margin-top: 10px;
+
+      transition: 0.3s;
+    }
+
+    .back-button:hover {
+      background: #f4c430;
+      color: #3b2419;
+    }
+
+
+    /* ================= MISSION ================= */
+
+    .mission {
+      background: #5b2d91;
+      color: white;
+
+      text-align: center;
+
+      padding: 60px 25px;
+
+      margin-top: 50px;
+    }
+
+    .mission h2 {
+      color: #f4c430;
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .mission p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #2d1a3d;
+      color: white;
+
+      text-align: center;
+
+      padding: 30px 20px;
+    }
+
+    footer span {
+      color: #f4c430;
+      font-weight: bold;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 750px) {
+
+      header {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+      }
+
+      .logo {
+        width: 75px;
+        height: 75px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero h2 {
+        font-size: 23px;
+      }
+
+      .board-container {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-box {
+        height: 330px;
+      }
+
+      .profile {
+        margin: 40px 20px;
+        padding: 25px;
+      }
+
+      .profile h2 {
+        font-size: 28px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     HEADER
+=================================================== -->
+
+<header>
+
+  <!-- LOGO TOP LEFT -->
+
+  <a href="index.html">
+    <img
+     <img src="C:\Users\kenne\OneDrive\Desktop\PROJECT 2062027\PIC\fig_image_1_9.jpg"
+      alt="Rachel's Refuge Logo"
+      class="logo"
+    >
+  </a>
+
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <a href="FRONT%20PAGE.html">Home</a>
+    <a href="OUR%20STORY.html">About Us</a>
+    <a href="GALLERY%20PAGE.html">Gallery page</a>
+    <a href="BOARD%20MEMBERS.html">Board Members</a>
+    <a href="CONTACT%20US.html">Contact us</a>
+     <a href="PROGRAMS">PROGRAMS</a>
+  </nav>
+
+
+  </nav>
+
+</header>
+
+
+
+<!-- ==================================================
+     HERO
+=================================================== -->
+
+<section class="hero">
+
+  <h1>OUR BOARD MEMBERS</h1>
+
+  <h2>Leadership beyond the game</h2>
+
+  <p>
+    Meet the dedicated people who help guide Rachel's Refuge
+    and support our mission of empowering girls through
+    basketball, mentorship, leadership and purpose.
+  </p>
+
+</section>
+
+
+
+<!-- ==================================================
+     BOARD MEMBERS
+=================================================== -->
+
+<section class="board-section">
+
+  <div class="section-title">
+
+    <h2>Meet Our Board</h2>
+
+    <div class="yellow-line"></div>
+
+    <p>
+      Our board members provide leadership, guidance and
+      support as Rachel's Refuge continues to create
+      opportunities for girls to grow through basketball
+      and mentorship.
+    </p>
+
+  </div>
+
+
+
+  <div class="board-container">
+
+
+    <!-- ==================================================
+         BOARD MEMBER 1
+    =================================================== -->
+
+    <div class="board-card">
+
+      <div class="photo-box">
+
+        <img
+          src="C:\Users\kenne\OneDrive\Desktop\PROJECT 2062027\PIC\Dr Mary.PNG"
+          alt="Rachel's Refuge Board Member"
+        >
+
+      </div>
+
+
+      <div class="card-content">
+
+        <h3>DR Mary MACHIRA </h3>
+
+        <div class="position">
+          Founder & Director
+        </div>
+
+        <p>
+          A legacy of purpose, perseverance and
+          empowerment through basketball.
+        </p>
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         BOARD MEMBER 2
+    =================================================== -->
+
+    <div class="board-card">
+
+      <div class="photo-box">
+
+        <!-- Replace logo.jpg with the second
+             board member's photograph -->
+
+        <img
+          src="C:\Users\kenne\OneDrive\Desktop\PROJECT 2062027\PIC\WhatsApp-Image-2025-06-27-at-12.58.00_796da392-e1751036469417.jpg"
+          alt="Rachel's Refuge Board Member"
+        >
+
+      </div>
+
+
+
+      <div class="card-content">
+
+        <h3> Rev Ken Aringo</h3>
+
+        <div class="position">
+        director and founder of PHD Ministries
+        </div>
+
+        <p>
+          Supporting the vision, growth and development
+          of Rachel's Refuge.
+        </p>
+
+
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+
+<!-- ==================================================
+     RACHEL PROFILE
+=================================================== -->
+
+<section class="profile" id="rachel-profile">
+
+  <h2>Rachel Odima</h2>
+
+  <div class="role">
+    Inspiration
+  </div>
+
+
+  <p>
+    Rachel Odima was a shining light—brilliant,
+    compassionate, and driven. She lived with intention,
+    leading in faith-based spaces like children's church
+    and the Fellowship of Christian Athletes, while
+    pursuing excellence in academics and athletics.
+  </p>
+
+
+  <p>
+    Her basketball journey began in eighth grade at
+    Central Junior High in Springdale, Arkansas. She later
+    continued at Har-Ber High School, where the competition
+    grew tougher and expectations were higher.
+  </p>
+
+
+  <p>
+    Though she faced challenges, Rachel never quit.
+    She worked hard, trained at home with her brothers,
+    and used every setback as motivation.
+  </p>
+
+
+  <p>
+    Her dream to play college basketball kept her focused—
+    not just for herself, but because she believed in using
+    basketball as a vehicle to empower youth, especially
+    young girls who needed someone to show them what was
+    possible.
+  </p>
+
+
+  <p>
+    Rachel's Refuge carries this vision forward by creating
+    a safe and supportive environment where girls can
+    develop their basketball abilities, confidence,
+    leadership skills and sense of purpose.
+  </p>
+
+
+  <a
+    href="#top"
+    class="back-button"
+  >
+    BACK TO BOARD MEMBERS
+  </a>
+
+</section>
+
+
+
+<!-- ==================================================
+     BOARD MEMBER 2 PROFILE
+=================================================== -->
+
+<section class="profile" id="member-profile">
+
+  <h2>Board Member</h2>
+
+  <div class="role">
+    Leadership & Mentorship
+  </div>
+
+
+  <p>
+    This board member contributes to the leadership and
+    continued development of Rachel's Refuge.
+  </p>
+
+
+  <p>
+    Through guidance, mentorship and community support,
+    the board helps Rachel's Refuge create meaningful
+    opportunities for girls through basketball.
+  </p>
+
+
+  <p>
+    The board works toward building a strong organization
+    where young girls can develop confidence, discipline,
+    teamwork and leadership.
+  </p>
+
+
+  <p>
+    <strong>Board Member Profile:</strong>
+  </p>
+
+  <ul>
+
+    <li>
+      Leadership and organizational support
+    </li>
+
+    <li>
+      Mentorship of young girls
+    </li>
+
+    <li>
+      Support for basketball development
+    </li>
+
+    <li>
+      Community engagement
+    </li>
+
+    <li>
+      Supporting the mission of Rachel's Refuge
+    </li>
+
+  </ul>
+
+
+  <a
+    href="#top"
+    class="back-button"
+  >
+    BACK TO BOARD MEMBERS
+  </a>
+
+</section>
+
+
+
+<!-- ==================================================
+     MISSION
+=================================================== -->
+
+<section class="mission">
+
+  <h2>Our Commitment</h2>
+
+  <p>
+    Rachel's Refuge is committed to empowering girls
+    through basketball and mentorship while building
+    confidence, leadership, perseverance and a belief
+    that every girl has the potential to achieve
+    extraordinary things.
+  </p>
+
+</section>
+
+
+
+<!-- ==================================================
+     FOOTER
+=================================================== -->
+
+<footer>
+
+  <p>
+    © 2026
+    <span>Rachel's Refuge</span>.
+    All Rights Reserved.
+  </p>
+
+  <p>
+    Empowering Girls • Building Champions • Changing Lives
+  </p>
+
+</footer>
+
+
+</body>
+</html>

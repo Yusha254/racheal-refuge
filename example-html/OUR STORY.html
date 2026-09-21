@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rachel's Refuge | Our Story</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: PURPLE;
+      color: black;
+      line-height: 1.7;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      width: 100%;
+      min-height: 100px;
+      background: whitesmoke;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color:BROWN;
+      font-weight: bold;
+      padding: 10px 16px;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: PURPLE;
+      color: #3b2419;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      background:purple;(
+        135deg,
+        #5b2d91,
+        #7b3fb5
+      );
+
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      color:PURPLE;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    /* ================= MAIN CONTENT ================= */
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      color: #yellow;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .section-title .line {
+      width: 80px;
+      height: 5px;
+      background: #f4c430;
+      margin: auto;
+      border-radius: 10px;
+    }
+
+    /* ================= OWNER CARD ================= */
+
+    .owner-card {
+      background:  white;
+      border-radius: 25px;
+      padding: 45px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 30px rgba(91,45,145,0.12);
+      border-left: 7px solid #f4c430;
+    }
+
+    .owner-header {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 25px;
+    }
+
+    .owner-icon {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background:WHITE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 45px;
+      flex-shrink: 0;
+    }
+
+    .owner-header h3 {
+      color:white;
+      font-size: 30px;
+    }
+
+    .owner-header span {
+      color:PURPLE;
+      font-weight: bold;
+    }
+
+    .owner-card p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    /* ================= STORY ================= */
+
+    .story {
+      background:LIGHT PURPLE;
+      border-radius: 25px;
+      padding: 45px;
+      margin-top: 30px;
+    }
+
+    .story h2 {
+      color: #5b2d91;
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .story p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background:BROWN;
+      border-left: 5px solid #f4c430;
+      padding: 25px;
+      border-radius: 10px;
+      margin-top: 25px;
+      font-style: italic;
+      font-size: 18px;
+    }
+
+    /* ================= VALUES ================= */
+
+    .values {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .value-card {
+      background: white;
+      width: 230px;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .value-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .value-card .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .value-card h3 {
+      color: #5b2d91;
+      margin-bottom: 10px;
+    }
+
+    /* ================= MISSION ================= */
+
+    .mission {
+      background: #5b2d91;
+      color: white;
+      padding: 60px 30px;
+      text-align: center;
+      margin-top: 60px;
+      border-radius: 25px;
+    }
+
+    .mission h2 {
+      color: #f4c430;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .mission p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 19px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #2d1a3d;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer span {
+      color: #f4c430;
+      font-weight: bold;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 750px) {
+
+      header {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+      }
+
+      .logo {
+        width: 75px;
+        height: 75px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero h2 {
+        font-size: 23px;
+      }
+
+      .owner-card,
+      .story {
+        padding: 25px;
+      }
+
+      .owner-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+  <!-- Rachel's Refuge Logo -->
+  <a href="index.html">
+    <img src="C:\Users\kenne\OneDrive\Desktop\PROJECT 2062027\PIC\fig_image_1_9.jpg"
+         alt="Rachel's Refuge Logo"
+         class="logo">
+  </a>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="FRONT%20PAGE.html">Home</a>
+    <a href="OUR%20STORY.html">About Us</a>
+    <a href="GALLERY%20PAGE.html">Gallery page</a>
+    <a href="BOARD%20MEMBERS.html">Board Members</a>
+    <a href="CONTACT%20US.html">Contact us</a>
+     <a href="PROGRAMS">PROGRAMS</a>
+  </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+  <h1>Rachel's Refuge</h1>
+
+  <h2>A Mentoring Program for Girls</h2>
+
+  <p>
+    Inspiring girls to dream boldly, persevere through challenges,
+    and discover what is possible through basketball, mentorship,
+    leadership and purpose.
+  </p>
+
+</section>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="container">
+
+  <div class="section-title">
+
+    <h2>Our Story</h2>
+
+    <div class="line"></div>
+
+  </div>
+
+
+  <!-- ================= RACHEL ODIMA ================= -->
+
+  <div class="owner-card">
+
+    <div class="owner-header">
+
+      <div class="owner-icon">
+        🏀
+      </div>
+
+      <div>
+        <h3>Rachel Odima</h3>
+        <span>A Legacy of Purpose and Perseverance</span>
+      </div>
+
+    </div>
+    <img decoding="async" width="1008" height="1024" src="https://phdmini.org/wp-content/uploads/2025/06/WhatsApp-Image-2023-11-18-at-08.47.24.jpeg" class="attachment-full size-full wp-image-99" alt="" srcset="https://phdmini.org/wp-content/uploads/2025/06/WhatsApp-Image-2023-11-18-at-08.47.24.jpeg 1008w, https://phdmini.org/wp-content/uploads/2025/06/WhatsApp-Image-2023-11-18-at-08.47.24-295x300.jpeg 295w, https://phdmini.org/wp-content/uploads/2025/06/WhatsApp-Image-2023-11-18-at-08.47.24-768x780.jpeg 768w, https://phdmini.org/wp-content/uploads/2025/06/WhatsApp-Image-2023-11-18-at-08.47.24-710x721.jpeg 710w, https://phdmini.org/wp-content/uploads/2025/06/WhatsApp-Image-2023-11-18-at-08.47.24-600x610.jpeg 600w" sizes="(max-width: 1008px) 100vw, 1008px">
+
+    <p>
+      Rachel Odima was a shining light—brilliant, compassionate,
+      and driven. She lived with intention, leading in faith-based
+      spaces like children's church and the Fellowship of Christian
+      Athletes, while pursuing excellence in academics and athletics.
+    </p>
+
+
+    <p>
+      Her basketball journey began in eighth grade at Central Junior
+      High in Springdale, Arkansas. She later continued at Har-Ber
+      High School, where the competition grew tougher and expectations
+      were higher.
+    </p>
+
+
+    <p>
+      Though she faced challenges, Rachel never quit. She worked hard,
+      trained at home with her brothers, and used every setback as
+      motivation.
+    </p>
+
+
+    <p>
+      Her dream to play college basketball kept her focused—not just
+      for herself, but because she believed in using basketball as a
+      vehicle to empower youth, especially young girls who needed
+      someone to show them what was possible.
+    </p>
+
+
+    <div class="highlight">
+
+      “Every setback can become motivation to keep moving forward.”
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= LEGACY ================= -->
+
+  <div class="story">
+
+    <h2>Rachel's Legacy</h2>
+
+    <p>
+      Rachel's story represents more than basketball. It represents
+      determination, faith, hard work, compassion and the courage
+      to continue pursuing a dream even when the journey becomes
+      difficult.
+    </p>
+
+    <p>
+      Rachel's Refuge carries this legacy forward by creating a
+      supportive environment where girls can learn, grow and believe
+      in themselves.
+    </p>
+
+    <p>
+      Through basketball and mentorship, the program seeks to give
+      young girls the encouragement and opportunities they need to
+      recognize their potential and pursue their dreams.
+    </p>
+
+  </div>
+
+
+  <!-- ================= OUR VALUES ================= -->
+
+  <div class="section-title" style="margin-top:70px;">
+
+    <h2>What We Believe In</h2>
+
+    <div class="line"></div>
+
+  </div>
+
+
+  <div class="values">
+
+    <div class="value-card">
+
+      <div class="icon">💪</div>
+
+      <h3>Perseverance</h3>
+
+      <p>
+        We encourage girls to keep going even when
+        challenges arise.
+      </p>
+
+    </div>
+
+
+    <div class="value-card">
+
+      <div class="icon">❤️</div>
+
+      <h3>Compassion</h3>
+
+      <p>
+        We create a caring and supportive community
+        for every girl.
+      </p>
+
+    </div>
+
+
+    <div class="value-card">
+
+      <div class="icon">🌟</div>
+
+      <h3>Excellence</h3>
+
+      <p>
+        We encourage young people to pursue excellence
+        in academics, sports and life.
+      </p>
+
+    </div>
+
+
+    <div class="value-card">
+
+      <div class="icon">🤝</div>
+
+      <h3>Mentorship</h3>
+
+      <p>
+        We connect girls with positive encouragement,
+        guidance and role models.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= MISSION ================= -->
+
+  <div class="mission">
+
+    <h2>Our Mission</h2>
+
+    <p>
+      Rachel's Refuge exists to empower girls through basketball
+      and mentorship by building confidence, developing leadership,
+      encouraging perseverance and helping young women recognize
+      that their dreams are possible.
+    </p>
+
+  </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+  <footer>
+    <a href="#home">
+      <img src="C:\Users\kenne\OneDrive\Desktop\PROJECT 2062027\PIC\PHD-Logo.png"
+           alt="Rachel's Refuge Logo"
+           class="logo">
+    </a>
+
+  <p>
+    © 2026 <span>Rachel's Refuge</span>.
+    All Rights Reserved.
+  </p>
+
+  <p>
+    Empowering Girls • Building Champions • Changing Lives
+  </p>
+
+</footer>
+
+</body>
+</html>

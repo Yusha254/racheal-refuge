@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rachel's Refuge | Basketball</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: PURPLE;
+      color: WHITE;
+    }
+
+    /* HEADER */
+    header {
+      height: 100px;
+      background: #WHITE;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgb(255 255 255);
+    }
+
+    /* LOGO TOP LEFT */
+    .logo {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+    }
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color:BROWN;
+      font-weight: bold;
+      padding: 10px 16px;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: PURPLE;
+      color: #3b2419;
+    }
+
+
+    /* HERO */
+    .hero {
+      min-height: 600px;
+      background: linear-gradient(
+        rgba(91, 45, 145, 0.85),
+        rgb(255 255 255)
+      ),
+      url("logo.jpg");
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      color: rgb(0 0 0 / 0.96);
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+      color: #f4c430;
+    }
+
+    .hero h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #f4c430;
+      color: #ffffff;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: rgb(255 255 255);
+      transform: scale(1.05);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 70px 8%;
+      text-align: center;
+    }
+
+    section h2 {
+      color: #black;
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    /* PROGRAMS */
+    .programs {
+      background: rgb(53 8 89 / 0.31);
+    }
+
+    .program-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .program-card {
+      background: ;
+      width: 280px;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgb(0 0 0 / 0.96);
+      transition: 0.3s;
+    }
+
+    .program-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .program-card h3 {
+      color: rgb(214 180 48);
+      margin-bottom: 15px;
+      font-size: 23px;
+    }
+
+    .icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    /* ABOUT */
+    .about {
+      background: LIGHTPURPLE;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: rgb(117 18 216 / 0.4);
+      color: rgb(255 255 255);
+    }
+
+    .contact h2 {
+      color: rgb(53 8 89 / 0.31);
+    }
+
+    .contact p {
+      margin-bottom: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #ffffff;
+      color: rgb(117 18 216 / 0.4);
+      text-align: center;
+      padding: 25px;
+    }
+
+    footer span {
+      color: #f4c430;
+      font-weight: bold;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+
+      header {
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .logo {
+        width: 110px;
+        height: 110px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+      }
+
+      nav a {
+        font-size: 17px;
+        padding: 8px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero h2 {
+        font-size: 23px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+<!-- HEADER WITH LOGO TOP LEFT -->
+<header>
+
+  <a href="#home">
+    <img src="C:\Users\kenne\OneDrive\Desktop\PROJECT 2062027\PIC\fig_image_1_9.jpg"
+         alt="Rachel's Refuge Logo"
+         class="logo">
+  </a>
+
+  <nav>
+    <a href="NEW%20PAGE.html">Home</a>
+    <a href="OUR%20STORY.html">About Us</a>
+    <a href="GALLERY%20PAGE.html">Gallery page</a>
+    <a href="BOARD%20MEMBERS.html">Board Members</a>
+    <a href="CONTACT%20US.html">Contact us</a>
+     <a href="PROGRAMS">PROGRAMS</a>
+  </nav>
+
+</header>
+
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>RACHEL'S REFUGE</h1>
+
+    <h2>Beyond The Game</h2>
+
+    <p>
+      Welcome to Rachel's Refuge, a basketball community
+      dedicated to empowering young girls and women through
+      sports, teamwork, confidence and leadership.
+    </p>
+
+    <a href="PROGRAMS.html" class="btn">
+      Explore Our Programs
+    </a>
+
+    <a href="CONTACT%20US.html" class="btn">
+      Join Us
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+  <h2>About Rachel's Refuge</h2>
+
+  <p>
+    Rachel's Refuge is a basketball initiative created to provide
+    a safe, supportive and inspiring environment where girls can
+    discover their talents and develop their basketball skills.
+    We believe that basketball is more than just a game.
+    It teaches discipline, teamwork, confidence, leadership
+    and determination.
+  </p>
+
+</section>
+
+
+<!-- PROGRAMS -->
+<section class="programs" id="programs">
+
+  <h2>Our Programs</h2>
+
+  <p>
+    Our programs are designed to support young players at
+    different stages of their basketball journey.
+  </p>
+
+  <div class="program-container">
+
+    <div class="program-card">
+
+      <div class="icon">🏀</div>
+
+      <h3>Basketball Training</h3>
+
+      <p>
+        Professional basketball training focusing on
+        shooting, passing, dribbling, defense and teamwork.
+      </p>
+
+    </div>
+
+
+    <div class="program-card">
+
+      <div class="icon">👩‍🦰</div>
+
+      <h3>Girls Empowerment</h3>
+
+      <p>
+        Programs designed to build confidence, leadership
+        skills and self-belief among young girls.
+      </p>
+
+    </div>
+
+
+    <div class="program-card">
+
+      <div class="icon">🏆</div>
+
+      <h3>Competitions</h3>
+
+      <p>
+        Friendly matches and tournaments that give players
+        an opportunity to showcase their abilities.
+      </p>
+
+    </div>
+
+
+    <div class="program-card">
+
+      <div class="icon">⭐</div>
+
+      <h3>Talent Development</h3>
+
+      <p>
+        Identifying and supporting talented players so
+        they can achieve their basketball goals.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROGRESS -->
+<section id="progress">
+
+  <h2>Our Progress</h2>
+
+  <p>
+    Rachel's Refuge continues to grow by reaching more young
+    players, organizing basketball activities and creating
+    opportunities for girls to participate in sports.
+    Our goal is to build a strong basketball community where
+    every girl feels valued, supported and inspired to succeed.
+  </p>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+  <h2>Contact Rachel's Refuge</h2>
+
+  <p>
+    Interested in joining our basketball community?
+  </p>
+
+  <p>
+    📧 Email: ianyeshua06@gmail.com
+  </p>
+
+  <p>
+    🏀 Let's grow together through basketball!
+  </p>
+
+  <a href="mailto:iany​​eshua06@gmail.com" class="btn">
+    Send Us an Email
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <a href="#home">
+    <img src="C:\Users\kenne\OneDrive\Desktop\PROJECT 2062027\PIC\PHD-Logo.png"
+         alt="Rachel's Refuge Logo"
+         class="logo">
+  </a>
+
+  <img>
+  <p>
+    © 2026 <span>Rachel's Refuge</span>.
+    All Rights Reserved.
+  </p>
+
+  <p>
+    Empowering Girls • Building Champions • Changing Lives
+  </p>
+
+</footer>
+
+</body>
+</html>

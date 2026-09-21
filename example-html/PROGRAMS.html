@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Programs | Rachel's Refuge</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fffaf0;
+      color: #d6b430;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      width: 100%;
+      min-height: 85px;
+
+      background: #5b2485;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 8px 4%;
+
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    }
+
+    /* =========================
+       LOGO - TOP LEFT
+    ========================== */
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      width: 300px;
+    }
+
+    .logo {
+      width: 285px;
+      height: 70px;
+
+      object-fit: contain;
+      object-position: center;
+
+      border-radius: 8px;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    nav ul {
+      list-style: none;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 5px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+
+      font-size: 14px;
+      font-weight: bold;
+
+      padding: 12px 14px;
+
+      border-radius: 25px;
+
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #ffd329;
+      color: rgb(0 0 0 / 0.96);
+    }
+
+    /* =========================
+       PAGE HERO
+    ========================== */
+
+    .page-hero {
+      min-height: 360px;
+
+      background:
+        linear-gradient(
+          rgba(91,36,133,0.86),
+          rgba(61,41,32,0.85)
+        );
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 70px 20px;
+    }
+
+    .page-hero-content {
+      max-width: 850px;
+      color: white;
+    }
+
+    .page-hero h1 {
+      font-size: 55px;
+      color: #ffd329;
+
+      text-transform: uppercase;
+
+      margin-bottom: 15px;
+    }
+
+    .page-hero p {
+      font-size: 20px;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    /* =========================
+       GENERAL SECTION
+    ========================== */
+
+    .section {
+      padding: 70px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      color: #5b2485;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      max-width: 750px;
+      margin: auto;
+      color: #604d42;
+    }
+
+    .yellow-line {
+      width: 75px;
+      height: 5px;
+
+      background: #ffd329;
+
+      margin: 12px auto;
+      border-radius: 10px;
+    }
+
+    /* =========================
+       FEATURED SCHOOL VISITATION
+    ========================== */
+
+    .featured-program {
+      background: white;
+
+      max-width: 1050px;
+      margin: 0 auto;
+
+      border-radius: 20px;
+
+      padding: 45px;
+
+      border-left: 8px solid #5b2485;
+
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    .featured-program h3 {
+      color: #5b2485;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .date-badge {
+      display: inline-block;
+
+      background: #ffd329;
+      color: #3d2920;
+
+      padding: 10px 20px;
+
+      border-radius: 25px;
+
+      font-weight: bold;
+
+      margin: 10px 0 25px;
+    }
+
+    .featured-program p {
+      font-size: 17px;
+      margin-bottom: 15px;
+    }
+
+    /* =========================
+       PROGRAM CARDS
+    ========================== */
+
+    .program-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .program-card {
+      background: white;
+
+      padding: 30px 25px;
+
+      border-radius: 18px;
+
+      box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+
+      border-top: 5px solid #5b2485;
+
+      transition: 0.3s;
+    }
+
+    .program-card:hover {
+      transform: translateY(-8px);
+
+      border-top-color: #ffd329;
+    }
+
+    .program-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .program-card h3 {
+      color: #5b2485;
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    /* =========================
+       VISITATION SCHEDULE
+    ========================== */
+
+    .schedule-container {
+      max-width: 1100px;
+      margin: auto;
+
+      overflow-x: auto;
+
+      background: white;
+
+      border-radius: 18px;
+
+      box-shadow: 0 6px 22px rgba(0,0,0,0.12);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 750px;
+    }
+
+    th {
+      background: #5b2485;
+      color: white;
+
+      padding: 17px;
+
+      text-align: left;
+    }
+
+    td {
+      padding: 17px;
+
+      border-bottom: 1px solid #eee;
+
+      vertical-align: top;
+    }
+
+    tr:hover {
+      background: #fff8dc;
+    }
+
+    .date {
+      font-weight: bold;
+      color: #5b2485;
+    }
+
+    .activity {
+      font-weight: bold;
+      color: #3d2920;
+    }
+
+    .tag {
+      display: inline-block;
+
+      padding: 5px 12px;
+
+      border-radius: 15px;
+
+      background: #ffd329;
+
+      color: #3d2920;
+
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    /* =========================
+       OBJECTIVES
+    ========================== */
+
+    .objectives {
+      max-width: 1000px;
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+    }
+
+    .objective {
+      background: rgb(53 8 89 / 0.31);
+
+      padding: 25px;
+
+      border-radius: 15px;
+
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .objective h3 {
+      color: #5b2485;
+      margin-bottom: 8px;
+    }
+
+    /* =========================
+       CALL TO ACTION
+    ========================== */
+
+    .cta {
+      background: #5b2485;
+
+      color: white;
+
+      text-align: center;
+
+      padding: 65px 20px;
+    }
+
+    .cta h2 {
+      color: #ffffff;
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+    }
+
+    .cta-button {
+      display: inline-block;
+
+      background: #ffd329;
+      color: #ffffff;
+
+      text-decoration: none;
+
+      padding: 14px 28px;
+
+      border-radius: 30px;
+
+      font-weight: bold;
+
+      transition: 0.3s;
+    }
+
+    .cta-button:hover {
+      background: white;
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #d6b430;
+
+      color: white;
+
+      text-align: center;
+
+      padding: 30px 20px;
+    }
+
+    footer span {
+      color: #ffd329;
+      font-weight: bold;
+    }
+
+    /* =========================
+       TABLET
+    ========================== */
+
+    @media (max-width: 1000px) {
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .logo-area {
+        justify-content: center;
+        width: 100%;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+      }
+
+      .program-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 650px) {
+
+      header {
+        position: relative;
+      }
+
+      .logo {
+        width: 250px;
+        height: 65px;
+      }
+
+      nav ul {
+        gap: 3px;
+      }
+
+      nav ul li a {
+        font-size: 11px;
+        padding: 8px 9px;
+      }
+
+      .page-hero h1 {
+        font-size: 38px;
+      }
+
+      .page-hero p {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 50px 20px;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .featured-program {
+        padding: 25px;
+      }
+
+      .featured-program h3 {
+        font-size: 25px;
+      }
+
+      .program-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .objectives {
+        grid-template-columns: 1fr;
+      }
+
+      .cta h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================== -->
+
+<header>
+
+  <!-- RACHEL'S REFUGE LOGO -->
+  <div class="logo-area">
+    <img
+<img src="C:\Users\kenne\OneDrive\Desktop\PROJECT 2062027\PIC\fig_image_1_9.jpg"
+      alt="Rachel's Refuge Logo"
+      class="logo"
+    >
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+
+      <li>
+        <a href="NEW%20PAGE%201.html">HOME</a>
+      </li>
+
+      <li>
+        <a href="OUR%20STORY.html">ABOUT US</a>
+      </li>
+
+      <li>
+        <a href="PROGRAMS.html" class="active">PROGRAMS</a>
+      </li>
+
+      <li>
+        <a href="BOARD%20MEMBERS.html">BOARD</a>
+      </li>
+
+      <li>
+        <a href="GALLERY%20PAGE.html">GALLERY</a>
+      </li>
+
+      <li>
+        <a href="CONTACT%20US.html">CONTACT</a>
+      </li>
+
+    </ul>
+  </nav>
+
+</header>
+
+
+<!-- =========================
+     PAGE HERO
+========================== -->
+
+<section class="page-hero">
+
+  <div class="page-hero-content">
+
+    <h1>Our Programs</h1>
+
+    <div class="yellow-line"></div>
+
+    <p>
+      Building confidence, leadership and opportunity
+      for girls through basketball, mentorship,
+      education and community engagement.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURED PROGRAM
+========================== -->
+
+<section class="section">
+
+  <div class="section-title">
+
+    <h2>Featured Program</h2>
+
+    <div class="yellow-line"></div>
+
+    <p>
+      Our upcoming school visitation program will
+      connect Rachel's Refuge with schools and
+      students through basketball and mentorship.
+    </p>
+
+  </div>
+
+
+  <div class="featured-program">
+
+    <h3>🏫 School Visitation Week</h3>
+
+    <div class="date-badge">
+      MAY 10 – MAY 16, 2027
+    </div>
+
+    <p>
+      Rachel's Refuge will conduct a week-long
+      school visitation program from
+      <strong>Monday, May 10, 2027</strong> through
+      <strong>Sunday, May 16, 2027</strong>.
+    </p>
+
+    <p>
+      The visitation program is designed to introduce
+      students to the opportunities available through
+      basketball, mentorship, education and leadership.
+    </p>
+
+    <p>
+      During the visits, the Rachel's Refuge team will
+      interact with students, coaches, teachers and
+      school communities while encouraging girls to
+      believe in their abilities and pursue their goals.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PROGRAM AREAS
+========================== -->
+
+<section class="section">
+
+  <div class="section-title">
+
+    <h2>What We Do</h2>
+
+    <div class="yellow-line"></div>
+
+  </div>
+
+
+  <div class="program-grid">
+
+    <div class="program-card">
+
+      <div class="program-icon">🏀</div>
+
+      <h3>Basketball Development</h3>
+
+      <p>
+        Girls receive opportunities to develop
+        basketball fundamentals, teamwork,
+        discipline and confidence on and off
+        the court.
+      </p>
+
+    </div>
+
+
+    <div class="program-card">
+
+      <div class="program-icon">💜</div>
+
+      <h3>Girls Mentorship</h3>
+
+      <p>
+        Mentorship sessions encourage young girls
+        to develop confidence, positive values,
+        personal responsibility and strong
+        relationships.
+      </p>
+
+    </div>
+
+
+    <div class="program-card">
+
+      <div class="program-icon">📚</div>
+
+      <h3>School Outreach</h3>
+
+      <p>
+        We visit schools to connect with students,
+        share experiences and encourage girls to
+        pursue education, sports and their dreams.
+      </p>
+
+    </div>
+
+
+    <div class="program-card">
+
+      <div class="program-icon">⭐</div>
+
+      <h3>Leadership Development</h3>
+
+      <p>
+        Participants are encouraged to become
+        leaders, role models and positive influences
+        within their schools and communities.
+      </p>
+
+    </div>
+
+
+    <div class="program-card">
+
+      <div class="program-icon">🤝</div>
+
+      <h3>Community Engagement</h3>
+
+      <p>
+        Rachel's Refuge works to build relationships
+        with schools, families, coaches and community
+        partners.
+      </p>
+
+    </div>
+
+
+    <div class="program-card">
+
+      <div class="program-icon">🌟</div>
+
+      <h3>Girls Empowerment</h3>
+
+      <p>
+        Our programs encourage girls to recognize
+        their potential and understand that their
+        circumstances do not have to determine their
+        future.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     MAY 10–16, 2027 SCHEDULE
+========================== -->
+
+<section class="section">
+
+  <div class="section-title">
+
+    <h2>School Visitation Schedule</h2>
+
+    <div class="yellow-line"></div>
+
+    <p>
+      May 10–16, 2027
+    </p>
+
+  </div>
+
+
+  <div class="schedule-container">
+
+    <table>
+
+      <thead>
+
+      <tr>
+
+        <th>Date</th>
+
+        <th>Day</th>
+
+        <th>Program Activity</th>
+
+        <th>Focus</th>
+
+      </tr>
+
+      </thead>
+
+
+      <tbody>
+
+      <tr>
+
+        <td class="date">
+          May 10, 2027
+        </td>
+
+        <td>
+          Monday
+        </td>
+
+        <td class="activity">
+          School Introduction & Outreach
+        </td>
+
+        <td>
+                            <span class="tag">
+                                INTRODUCTION
+                            </span>
+        </td>
+
+      </tr>
+
+
+      <tr>
+
+        <td class="date">
+          May 11, 2027
+        </td>
+
+        <td>
+          Tuesday
+        </td>
+
+        <td class="activity">
+          Basketball Skills Session
+        </td>
+
+        <td>
+                            <span class="tag">
+                                BASKETBALL
+                            </span>
+        </td>
+
+      </tr>
+
+
+      <tr>
+
+        <td class="date">
+          May 12, 2027
+        </td>
+
+        <td>
+          Wednesday
+        </td>
+
+        <td class="activity">
+          Girls Mentorship Session
+        </td>
+
+        <td>
+                            <span class="tag">
+                                MENTORSHIP
+                            </span>
+        </td>
+
+      </tr>
+
+
+      <tr>
+
+        <td class="date">
+          May 13, 2027
+        </td>
+
+        <td>
+          Thursday
+        </td>
+
+        <td class="activity">
+          Leadership & Confidence Workshop
+        </td>
+
+        <td>
+                            <span class="tag">
+                                LEADERSHIP
+                            </span>
+        </td>
+
+      </tr>
+
+
+      <tr>
+
+        <td class="date">
+          May 14, 2027
+        </td>
+
+        <td>
+          Friday
+        </td>
+
+        <td class="activity">
+          Basketball & Teamwork Activities
+        </td>
+
+        <td>
+                            <span class="tag">
+                                TEAMWORK
+                            </span>
+        </td>
+
+      </tr>
+
+
+      <tr>
+
+        <td class="date">
+          May 15, 2027
+        </td>
+
+        <td>
+          Saturday
+        </td>
+
+        <td class="activity">
+          Community Basketball & Mentorship
+        </td>
+
+        <td>
+                            <span class="tag">
+                                COMMUNITY
+                            </span>
+        </td>
+
+      </tr>
+
+
+      <tr>
+
+        <td class="date">
+          May 16, 2027
+        </td>
+
+        <td>
+          Sunday
+        </td>
+
+        <td class="activity">
+          Reflection, Encouragement & Program Closing
+        </td>
+
+        <td>
+                            <span class="tag">
+                                CLOSING
+                            </span>
+        </td>
+
+      </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PROGRAM OBJECTIVES
+========================== -->
+
+<section class="section">
+
+  <div class="section-title">
+
+    <h2>Program Objectives</h2>
+
+    <div class="yellow-line"></div>
+
+  </div>
+
+
+  <div class="objectives">
+
+    <div class="objective">
+
+      <h3>01. Build Confidence</h3>
+
+      <p>
+        Help girls develop confidence in their
+        abilities both on and off the basketball court.
+      </p>
+
+    </div>
+
+
+    <div class="objective">
+
+      <h3>02. Encourage Education</h3>
+
+      <p>
+        Encourage students to value education and
+        understand its importance in achieving their
+        future goals.
+      </p>
+
+    </div>
+
+
+    <div class="objective">
+
+      <h3>03. Develop Leadership</h3>
+
+      <p>
+        Provide opportunities for girls to develop
+        leadership skills and become positive role
+        models.
+      </p>
+
+    </div>
+
+
+    <div class="objective">
+
+      <h3>04. Promote Teamwork</h3>
+
+      <p>
+        Use basketball to teach communication,
+        cooperation, discipline and respect.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CALL TO ACTION
+========================== -->
+
+<section class="cta">
+
+  <h2>Be Part of Rachel's Refuge</h2>
+
+  <p>
+    Schools, families, coaches and community partners
+    are welcome to connect with Rachel's Refuge as we
+    work to empower the next generation of girls.
+  </p>
+
+  <a href="contact.html" class="cta-button">
+    CONTACT US
+  </a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+  <p>
+    © 2027 <span>Rachel's Refuge</span>.
+    All Rights Reserved.
+  </p>
+
+  <p>
+    Empowering Girls Through Basketball & Mentorship
+  </p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: var(--purple);
+  color: var(--white);
+  padding: 30px;
+  border-radius: 22px;
+}
+
+.card::after {
+  content: "♡";
+  position: absolute;
+  right: 18px;
+  top: 8px;
+  color: rgba(246, 201, 40, 0.28);
+  font-size: 60px;
+}
+
+.card h3 {
+  color: var(--gold);
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  margin-bottom: 9px;
+}
+
+.card p {
+  color: #eee5f1;
+}
+
+@media (max-width: 950px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

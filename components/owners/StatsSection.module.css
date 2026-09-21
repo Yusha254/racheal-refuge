@@ -1,0 +1,44 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat {
+  padding: 30px 18px;
+  text-align: center;
+  background: var(--light-purple);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+}
+
+.number {
+  color: var(--purple);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.label {
+  margin-top: 8px;
+  color: var(--gray);
+  font-weight: 700;
+}
+
+.note {
+  margin-top: 5px;
+  color: #9a879f;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 950px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
